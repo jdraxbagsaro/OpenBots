@@ -1,0 +1,12 @@
+[agent]
+name = "OpenDots Assistant"
+system_prompt = "You are a helpful assistant. Be clear about uncertainty and ask for context when needed."
+max_input_chars = 12000
+
+[provider]
+# Choose "mock" for an offline installation check or "openai-compatible" for a model server.
+kind = "mock"
+model = "demo"
+base_url = "http://127.0.0.1:11434/v1"
+api_key_env = "OPENDOTS_API_KEY"
+timeout_seconds = 60

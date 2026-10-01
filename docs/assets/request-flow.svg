@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">OpenDots workflow and provider boundaries</title>
+  <desc id="desc">The CLI starts a transparent plan, compose, and review sequence. Each stage goes through the agent runtime and input check before reaching either the offline mock or a user-selected compatible model server.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#3c5d63" />
+    </marker>
+    <style>
+      text { font-family: Segoe UI, sans-serif; fill: #17282d; }
+      .label { font-size: 15px; font-weight: 650; }
+      .detail { font-size: 11px; fill: #4c656b; }
+      .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; fill: #28756d; }
+      .edge { fill: none; stroke: #3c5d63; stroke-width: 2; marker-end: url(#arrow); }
+      .feedback { fill: none; stroke: #c48634; stroke-width: 1.6; stroke-dasharray: 5 5; marker-end: url(#arrow); }
+      .box { stroke-width: 1.4; rx: 10; }
+    </style>
+  </defs>
+  <rect width="1200" height="430" fill="#f4f6f1" rx="16" />
+  <rect x="16" y="16" width="1168" height="398" fill="none" stroke="#d5dfd8" rx="12" />
+  <text class="eyebrow" x="40" y="46">OPENDOTS / EXECUTION MAP</text>
+  <text x="40" y="72" font-size="21" font-weight="650">Visible stages. Explicit boundaries.</text>
+  <text class="detail" x="40" y="94">One objective, three sequential completions, inspectable output at every step.</text>
+
+  <rect class="box" x="40" y="160" width="128" height="70" fill="#ffffff" stroke="#bacbc3" />
+  <text class="label" x="104" y="190" text-anchor="middle">CLI + config</text>
+  <text class="detail" x="104" y="210" text-anchor="middle">objective / TOML</text>
+  <path class="edge" d="M168 195h44" />
+
+  <rect class="box" x="216" y="132" width="148" height="52" fill="#e0efe7" stroke="#82ae9a" />
+  <text class="label" x="290" y="163" text-anchor="middle">01 / Plan</text>
+  <rect class="box" x="216" y="200" width="148" height="52" fill="#fff0d7" stroke="#d5aa63" />
+  <text class="label" x="290" y="231" text-anchor="middle">02 / Compose</text>
+  <rect class="box" x="216" y="268" width="148" height="52" fill="#e6edf3" stroke="#94aabd" />
+  <text class="label" x="290" y="299" text-anchor="middle">03 / Review</text>
+  <path class="edge" d="M364 158h33v68h-25" />
+  <path class="edge" d="M364 226h33v68h-25" />
+
+  <rect class="box" x="432" y="190" width="146" height="72" fill="#ffffff" stroke="#82ae9a" />
+  <text class="label" x="505" y="220" text-anchor="middle">Agent runtime</text>
+  <text class="detail" x="505" y="241" text-anchor="middle">prompt + size check</text>
+  <path class="edge" d="M397 294h14q21 0 21-20v-48" />
+  <path class="edge" d="M578 226h42" />
+
+  <path d="M648 156 714 226l-66 70-66-70z" fill="#f4f6f1" stroke="#c48634" stroke-width="1.5" />
+  <text class="label" x="648" y="222" text-anchor="middle">Provider</text>
+  <text class="detail" x="648" y="241" text-anchor="middle">selection</text>
+  <path class="edge" d="M714 226h36v-53h24" />
+  <path class="edge" d="M714 226h36v59h24" />
+
+  <rect class="box" x="774" y="142" width="160" height="62" fill="#ffffff" stroke="#82ae9a" />
+  <text class="label" x="854" y="168" text-anchor="middle">Offline mock</text>
+  <text class="detail" x="854" y="188" text-anchor="middle">deterministic echo</text>
+  <rect class="box" x="774" y="254" width="160" height="62" fill="#e6edf3" stroke="#94aabd" />
+  <text class="label" x="854" y="280" text-anchor="middle">HTTP adapter</text>
+  <text class="detail" x="854" y="300" text-anchor="middle">chat completions</text>
+  <path class="edge" d="M934 285h40" />
+  <rect class="box" x="978" y="254" width="178" height="62" fill="#ffffff" stroke="#94aabd" />
+  <text class="label" x="1067" y="280" text-anchor="middle">Your model server</text>
+  <text class="detail" x="1067" y="300" text-anchor="middle">local or remote</text>
+
+  <path class="feedback" d="M505 262v112h410v-51" />
+  <text class="detail" x="710" y="394" text-anchor="middle">prior stage output feeds the next call; no tools or computer control</text>
+</svg>
